@@ -9,3 +9,4 @@ getContacts(contacts => {
     // Not that render() is returning actual HTML as text, so we use innerHTML
     document.getElementById('app').innerHTML = contactList.render();
 });
+

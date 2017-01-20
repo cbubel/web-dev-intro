@@ -14,7 +14,12 @@ class ContactList {
 
         return `
             <h1>${this.title}</h1>
-            <ul>${output}</ul>
+            <a class="list-group">${output}</a>
         `;
+    }
+
+    select(id) {
+        this.selected = id;
+        document.getElementById('app').innerHTML = this.render();
     }
 }
