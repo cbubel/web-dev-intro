@@ -12,7 +12,7 @@ class ContactList {
             output += contact.render(); // Calls contact.js render()
         }
 
-        return `
+        document.getElementById('app').innerHTML = `
             <h1>${this.title}</h1>
             <a class="list-group">${output}</a>
         `;
@@ -20,6 +20,6 @@ class ContactList {
 
     select(id) {
         this.selected = id;
-        document.getElementById('app').innerHTML = this.render();
+        this.render();
     }
 }
