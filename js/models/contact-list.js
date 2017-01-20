@@ -12,6 +12,9 @@ class ContactList {
             output += contact.render(); // Calls contact.js render()
         }
 
-        return `<ul>${output}</ul>`;
+        return `
+            <h1>${this.title}</h1>
+            <ul>${output}</ul>
+        `;
     }
 }
