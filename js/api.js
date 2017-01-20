@@ -1,4 +1,5 @@
 function getContacts(giveback) {
+    // Standard XHR
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if(this.readyState === 4) {
@@ -11,6 +12,7 @@ function getContacts(giveback) {
                 contacts.push(Object.assign(new Contact(), c));
             }
 
+            // Callback through which we return the contacts
             giveback(contacts);
         }
     };
